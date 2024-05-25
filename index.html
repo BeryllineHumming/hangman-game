@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="splash">
+        <img class="chalkman" src="hangman.svg" width="130px" />
+        <h1 class="game-title">Hangman</h1>
+        <button class="btn start-game">Play</button>
+      </div>
+      <div class="game hidden">
+        <div class="stage">
+          <div class="sf head hidden">
+            <svg
+              width="150"
+              height="150"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="75"
+                cy="75"
+                r="68"
+                stroke="white"
+                fill="transparent"
+                stroke-width="15"
+              />
+            </svg>
+          </div>
+          <div class="sf torso hidden">
+            <svg
+              width="200"
+              height="250"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="10"
+                x2="10"
+                y1="0"
+                y2="180"
+                stroke="white"
+                stroke-width="15"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="sf left-arm hidden">
+            <svg
+              width="200"
+              height="250"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="10"
+                x2="10"
+                y1="0"
+                y2="150"
+                stroke="white"
+                stroke-width="12"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="sf right-arm hidden">
+            <svg
+              width="200"
+              height="250"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="10"
+                x2="10"
+                y1="0"
+                y2="150"
+                stroke="white"
+                stroke-width="12"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="sf left-leg hidden">
+            <svg
+              width="200"
+              height="250"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="10"
+                x2="10"
+                y1="0"
+                y2="200"
+                stroke="white"
+                stroke-width="15"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="sf right-leg hidden">
+            <svg
+              width="200"
+              height="250"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="10"
+                x2="10"
+                y1="0"
+                y2="200"
+                stroke="white"
+                stroke-width="15"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="answer-input">
+          <h2 id="answer-title">Answer:</h2>
+          <div class="letter-display"></div>
+          <div class="keyboard" id="keyboard"></div>
+          <div class="wrong-letters-container">
+            <h2 id="wrong-letters-title">Wrong Letters:</h2>
+            <div class="wrong-letters"></div>
+          </div>
+          <button class="btn gimme-hint">Hint</button>
+        </div>
+      </div>
+    </div>
+    <div class="hint-container hidden">
+      <button class="hint-exit">&times;</button>
+      <h2>Hint</h2>
+      <div class="hint-text"></div>
+    </div>
+    <div class="result hidden">
+      <div class="anim-container">
+        <div class="result-text"></div>
+        <button class="btn start-game replay">Play Again?</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
